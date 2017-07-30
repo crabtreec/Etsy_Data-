@@ -8,7 +8,6 @@ console.log(data);
 
 // 1: Show me how to calculate the average price of all items.
 function question1 () {
-  // Answer:
   var tempVal;
   var sumVal = 0;
   var avgPrice = 0;
@@ -24,16 +23,27 @@ console.log(question1())
 
 // 2: Show me how to get an array of items that cost between $14.00 and $18.00 USD
 function question2 () {
-  // Answer:
+var newArray = [];
+for ( i = 0; i < data.length; i++) {
+  if (data[i].price >= 14.00 && data[i].price <= 18.00) {
+    newArray.push(data[i].title);
+  }
 }
+return newArray
+}
+console.log(question2())
 
 
 
 // 3: Which item has a "GBP" currency code? Display it's name and price.
 function question3 () {
-  // Answer:
+  for (i = 0; i < data.length; i++) {
+    if (data[i].currency_code === "GBP") {
+      return data[i].title + " costs " + data[i].price + " pounds.";
+    }
+  }
 }
-
+console.log(question3())
 
 // 4: Display a list of all items who are made of wood.
 function question4 () {
