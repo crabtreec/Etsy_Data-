@@ -11,7 +11,7 @@ function question1 () {
   var tempVal;
   var sumVal = 0;
   var avgPrice = 0;
-  for (i=0;i<data.length;i++) {
+  for (i = 0; i< data.length; i++) {
     tempVal = data[i].price;
     sumVal += tempVal
   }
@@ -47,15 +47,14 @@ console.log(question3())
 
 // 4: Display a list of all items who are made of wood.
 function question4 () {
-  let woodList = [];
-  for (i = 0; i < data.length; i++) {
-    for (j = 0; j < data[i].materials.length; j++){
-      if (data[i].materials[j] === "wood") {
-        woodList.push(data[i].title);
-      }
-    }
+  let woodList = []
+
+for (let i = 0; i < data.length; i++) {
+  if (data[i].materials.indexOf("wood") > -1) {
+    woodList.push(data[i])
   }
-  return woodList;
+    }
+return woodList;
 }
 console.log(question4())
 
@@ -66,12 +65,12 @@ function question5 () {
 let newArray = []
 
 for (let i = 0; i < data.length; i++) {
-  for (let j = 0; j < data[i].materials.length; j++) {
-    if (data[j].materials => [8]) {
-    newArray.push(data[i].title, data[i].material.length, data[i].materials);
+    if (data[i].materials.length >= 8) {
+      newArray.push(data[i]);
     }
-  }
-  return newArray
+
+}
+return newArray;
 }
 
 console.log(question5())
